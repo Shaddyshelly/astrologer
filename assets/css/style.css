@@ -59,33 +59,76 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
+# Back to call button
 --------------------------------------------------------------*/
-#preloader {
+.back-to-call {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
+  /* visibility: hidden; */
+  opacity: 1;
+  right: 20px;
+  bottom: 90px;
+  z-index: 996;
+  background: #ffc451;
+  width: 60px;
+  height: 60px;
+  border-radius: 32px;
+  transition: all 0.4s;
+}
+
+.back-to-call i {
+  font-size: 28px;
+  color: #151515;
+  line-height: 0;
+}
+
+.back-to-call:hover {
   background: #151515;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffc451;
-  border-top-color: #151515;
-  border-bottom-color: #151515;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+.back-to-call:hover i {
+  color: #ffc451;
 }
 
+.back-to-call.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Back to w button
+--------------------------------------------------------------*/
+.back-to-w {
+  position: fixed;
+  /* visibility: hidden; */
+  opacity: 1;
+  right: 20px;
+  bottom: 160px;
+  z-index: 996;
+  background: #ffc451;
+  width: 60px;
+  height: 60px;
+  border-radius: 32px;
+  transition: all 0.4s;
+}
+
+.back-to-w i {
+  font-size: 28px;
+  color: #151515;
+  line-height: 0;
+}
+
+.back-to-w:hover {
+  background: #151515;
+}
+
+.back-to-w:hover i {
+  color: #ffc451;
+}
+
+.back-to-w.active {
+  visibility: visible;
+  opacity: 1;
+}
 @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
